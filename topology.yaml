@@ -65,6 +65,42 @@ topology:
       mgmt-ipv4: 172.20.2.213
       startup-config: xrd-config/vdt-rr-13.cfg
 
+    fm-pe-9:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.209
+      startup-config: xrd-config/fm-pe-9.cfg
+
+    fm-pe-10:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.210
+      startup-config: xrd-config/fm-pe-10.cfg
+
+    fm-pe-11:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.211
+      startup-config: xrd-config/fm-pe-11.cfg
+
+    fm-pe-12:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.212
+      startup-config: xrd-config/fm-pe-12.cfg
+
+    fm-rr-14:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.214
+      startup-config: xrd-config/fm-rr-14.cfg
+
+    fm-rr-15:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.215
+      startup-config: xrd-config/fm-rr-15.cfg
+
   links:
     - endpoints: ["vdt-ia-1:Gi0-0-0-0", "vdt-ia-2:Gi0-0-0-0"]
     - endpoints: ["vdt-ia-1:Gi0-0-0-1", "vdt-ia-3:Gi0-0-0-1"]
@@ -76,5 +112,22 @@ topology:
     - endpoints: ["vdt-pe-7:Gi0-0-0-0", "vdt-pe-8:Gi0-0-0-0"]
     - endpoints: ["vdt-pe-7:Gi0-0-0-2", "vdt-ia-4:Gi0-0-0-2"]
     - endpoints: ["vdt-pe-8:Gi0-0-0-2", "vdt-ia-3:Gi0-0-0-2"]
-    - endpoints: ["vdt-pe-5:Gi0-0-0-1", "vdt-rr-13:Gi0-0-0-0"]
-    - endpoints: ["vdt-pe-6:Gi0-0-0-1", "vdt-rr-13:Gi0-0-0-1"]
+    - endpoints: ["vdt-pe-5:Gi0-0-0-3", "vdt-rr-13:Gi0-0-0-0"]
+    - endpoints: ["vdt-pe-6:Gi0-0-0-3", "vdt-rr-13:Gi0-0-0-1"]
+    - endpoints: ["vdt-pe-7:Gi0-0-0-1", "fm-pe-11:Gi0-0-0-1"]
+
+    - endpoints: ["fm-pe-9:Gi0-0-0-3", "fm-pe-11:Gi0-0-0-3"]
+    - endpoints: ["fm-pe-9:Gi0-0-0-0", "fm-pe-10:Gi0-0-0-0"]
+    - endpoints: ["fm-pe-9:Gi0-0-0-1", "vdt-pe-5:Gi0-0-0-1"]
+
+    - endpoints: ["fm-pe-10:Gi0-0-0-1", "vdt-pe-6:Gi0-0-0-1"]
+    - endpoints: ["fm-pe-10:Gi0-0-0-3", "fm-pe-12:Gi0-0-0-3"]
+    - endpoints: ["fm-pe-10:Gi0-0-0-2", "fm-rr-14:Gi0-0-0-2"]
+
+    - endpoints: ["fm-pe-11:Gi0-0-0-0", "fm-pe-12:Gi0-0-0-0"]
+
+    - endpoints: ["fm-pe-12:Gi0-0-0-1", "vdt-pe-8:Gi0-0-0-1"]
+    - endpoints: ["fm-pe-12:Gi0-0-0-2", "fm-rr-15:Gi0-0-0-2"]
+
+
+
