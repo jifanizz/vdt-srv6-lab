@@ -1,0 +1,80 @@
+name: vdt-srv6-lab
+
+mgmt:
+  network: mgt
+  ipv4-subnet: 172.20.2.0/24
+
+topology:
+  kinds:
+    c8000:
+      kind: cisco_c8000
+      image-pull-policy: Never
+
+  nodes:
+    vdt-ia-1:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.201
+      startup-config: xrd-config/vdt-ia-1.cfg
+
+    vdt-ia-2:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.202
+      startup-config: xrd-config/vdt-ia-2.cfg
+
+    vdt-ia-3:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.203
+      startup-config: xrd-config/vdt-ia-3.cfg
+
+    vdt-ia-4:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.204
+      startup-config: xrd-config/vdt-ia-4.cfg
+
+    vdt-pe-5:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.205
+      startup-config: xrd-config/vdt-pe-5.cfg
+
+    vdt-pe-6:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.206
+      startup-config: xrd-config/vdt-pe-6.cfg
+
+    vdt-pe-7:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.207
+      startup-config: xrd-config/vdt-pe-7.cfg
+
+    vdt-pe-8:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.208
+      startup-config: xrd-config/vdt-pe-8.cfg
+
+    vdt-rr-13:
+      kind: cisco_xrd
+      image: ios-xr/xrd-control-plane:24.3.2
+      mgmt-ipv4: 172.20.2.213
+      startup-config: xrd-config/vdt-rr-13.cfg
+
+  links:
+    - endpoints: ["vdt-ia-1:Gi0-0-0-0", "vdt-ia-2:Gi0-0-0-0"]
+    - endpoints: ["vdt-ia-1:Gi0-0-0-1", "vdt-ia-3:Gi0-0-0-1"]
+    - endpoints: ["vdt-ia-2:Gi0-0-0-1", "vdt-ia-4:Gi0-0-0-1"]
+    - endpoints: ["vdt-ia-3:Gi0-0-0-0", "vdt-ia-4:Gi0-0-0-0"]
+    - endpoints: ["vdt-pe-5:Gi0-0-0-0", "vdt-pe-6:Gi0-0-0-0"]
+    - endpoints: ["vdt-pe-5:Gi0-0-0-2", "vdt-ia-2:Gi0-0-0-2"]
+    - endpoints: ["vdt-pe-6:Gi0-0-0-2", "vdt-ia-1:Gi0-0-0-2"]
+    - endpoints: ["vdt-pe-7:Gi0-0-0-0", "vdt-pe-8:Gi0-0-0-0"]
+    - endpoints: ["vdt-pe-7:Gi0-0-0-2", "vdt-ia-4:Gi0-0-0-2"]
+    - endpoints: ["vdt-pe-8:Gi0-0-0-2", "vdt-ia-3:Gi0-0-0-2"]
+    - endpoints: ["vdt-pe-5:Gi0-0-0-1", "vdt-rr-13:Gi0-0-0-0"]
+    - endpoints: ["vdt-pe-6:Gi0-0-0-1", "vdt-rr-13:Gi0-0-0-1"]
