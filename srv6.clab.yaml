@@ -20,77 +20,77 @@ topology:
   nodes:
     vdt-ia-1:
       kind: xrd
-      mgmt-ipv4: 198.18.130.101
+      mgmt-ipv4: 198.18.128.101
       startup-config: xrd-config/vdt-ia-1.cfg
 
     vdt-ia-2:
       kind: xrd
-      mgmt-ipv4: 198.18.130.102
+      mgmt-ipv4: 198.18.128.102
       startup-config: xrd-config/vdt-ia-2.cfg
 
     vdt-ia-3:
       kind: c8000
-      mgmt-ipv4: 198.18.130.103
+      mgmt-ipv4: 198.18.128.103
       startup-config: xrd-config/vdt-ia-3.cfg
 
     vdt-ia-4:
       kind: c8000
-      mgmt-ipv4: 198.18.130.104
+      mgmt-ipv4: 198.18.128.104
       startup-config: xrd-config/vdt-ia-4.cfg
 
     vdt-pe-5:
       kind: xrd
-      mgmt-ipv4: 198.18.130.105
+      mgmt-ipv4: 198.18.128.105
       startup-config: xrd-config/vdt-pe-5.cfg
 
     vdt-pe-6:
       kind: xrd
-      mgmt-ipv4: 198.18.130.106
+      mgmt-ipv4: 198.18.128.106
       startup-config: xrd-config/vdt-pe-6.cfg
 
     vdt-pe-7:
       kind: c8000
-      mgmt-ipv4: 198.18.130.107
+      mgmt-ipv4: 198.18.128.107
       startup-config: xrd-config/vdt-pe-7.cfg
 
     vdt-pe-8:
       kind: c8000
-      mgmt-ipv4: 198.18.130.108
+      mgmt-ipv4: 198.18.128.108
       startup-config: xrd-config/vdt-pe-8.cfg
 
     vdt-rr-13:
       kind: xrd
-      mgmt-ipv4: 198.18.130.113
+      mgmt-ipv4: 198.18.128.113
       startup-config: xrd-config/vdt-rr-13.cfg
 
     fm-pe-9:
       kind: xrd
-      mgmt-ipv4: 198.18.130.109
+      mgmt-ipv4: 198.18.128.109
       startup-config: xrd-config/fm-pe-9.cfg
 
     fm-pe-10:
       kind: xrd
-      mgmt-ipv4: 198.18.130.110
+      mgmt-ipv4: 198.18.128.110
       startup-config: xrd-config/fm-pe-10.cfg
 
     fm-pe-11:
       kind: xrd
-      mgmt-ipv4: 198.18.130.111
+      mgmt-ipv4: 198.18.128.111
       startup-config: xrd-config/fm-pe-11.cfg
 
     fm-pe-12:
       kind: xrd
-      mgmt-ipv4: 198.18.130.112
+      mgmt-ipv4: 198.18.128.112
       startup-config: xrd-config/fm-pe-12.cfg
 
     fm-rr-14:
       kind: xrd
-      mgmt-ipv4: 198.18.130.114
+      mgmt-ipv4: 198.18.128.114
       startup-config: xrd-config/fm-rr-14.cfg
 
     fm-rr-15:
       kind: xrd
-      mgmt-ipv4: 198.18.130.115
+      mgmt-ipv4: 198.18.128.115
       startup-config: xrd-config/fm-rr-15.cfg
 
   links:
