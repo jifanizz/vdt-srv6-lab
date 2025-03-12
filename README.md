@@ -2,6 +2,9 @@
 
 Welcome to the VDT SRv6 Lab repository. This README provides an overview of the project, setup instructions, and usage guidelines.
 
+## VDT-SRv6-LAB Topology
+
+![VDT SRv6 Lab Diagram](vdt-srv6-clab.png)
 
 ## Setup Instructions
 
