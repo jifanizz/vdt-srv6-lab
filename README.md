@@ -15,7 +15,7 @@ Follow these steps to set up the VDT SRv6 Lab environment:
 
 2. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/vdt-srv6-lab.git
+    git clone https://github.com/jifanizz/vdt-srv6-lab.git
     ```
 3. Navigate to the project directory:
     ```sh
