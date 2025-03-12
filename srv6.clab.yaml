@@ -11,7 +11,7 @@ topology:
   kinds:
     c8000:
       kind: cisco_c8000
-      image: 8201-32fh_clab354:latest
+      image: artifactory.devhub-cloud.cisco.com/asp-container-lab-docker/8201-32fh:24.4.1
 
     xrd:
       kind: cisco_xrd
