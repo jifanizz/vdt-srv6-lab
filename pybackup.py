@@ -19,7 +19,6 @@ os.makedirs(outfilepath, exist_ok=True)
 
 
 infilepath = "./"
-#outfilepath = "/Users/jifanizz/code/clab/vdt-srv6-lab/pybackup/"
 devicelist = "device-list1.txt"
  
 # open device file
