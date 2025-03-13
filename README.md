@@ -39,8 +39,9 @@ Follow these steps to set up the VDT SRv6 Lab environment:
 
 ContainerLab will not save changes to startup-configs in xrd-config directory.  Executing the backup will backup the config files of the IP addresses of routers in the pybackup directory.
 
-Backup configs:
+1. Backup configs:
     ```sh
     python pybackup.py
     ```
+
 
