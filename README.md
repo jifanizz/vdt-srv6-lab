@@ -41,7 +41,7 @@ ContainerLab will not save changes to startup-configs in xrd-config directory.  
 
 1. Backup configs:
     ```sh
-    python pybackup.py
+    python3 pybackup.py
     ```
 
 
