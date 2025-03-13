@@ -34,3 +34,12 @@ Follow these steps to set up the VDT SRv6 Lab environment:
     ```
 6. SSH to virtual routers with username cisco and password cisco123.
 
+
+## Config Backups
+
+ContainerLab will not save changes to startup-configs in xrd-config directory.  Executing the backup will backup the config files of the IP addresses of routers in the pybackup directory.
+
+    ```sh
+        python pybackup.py
+    ```
+
